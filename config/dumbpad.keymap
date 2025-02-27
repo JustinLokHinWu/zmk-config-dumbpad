@@ -46,7 +46,6 @@
             bindings = <&kp C_AL_CALC>;
             key-positions = <13 14>;
         };
-+
         ext_off {
             bindings = <&ext_power EP_OFF>;
             key-positions = <4 0>;
