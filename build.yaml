@@ -18,8 +18,8 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: dumbpad
     artifact-name: supermini-nrf52840-dumbpad
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
