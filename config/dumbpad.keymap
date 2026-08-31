@@ -13,7 +13,7 @@
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder>;
-        triggers-per-rotation = <15>;
+        triggers-per-rotation = <24>;
     };
 
     behaviors {
@@ -22,13 +22,6 @@
             label = "TD";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&to 1>;
-        };
-
-        td_mul_div: td_mul_div {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_MUL_DIV";
-            #binding-cells = <0>;
-            bindings = <&kp KP_MULTIPLY>, <&kp KP_DIVIDE>;
         };
     };
 
@@ -51,11 +44,11 @@
 
         default_layer {
             bindings = <
-&kp C_PP
-&kp KP_N7  &kp KP_N8  &kp KP_N9        &kp KP_MINUS
-&kp KP_N4  &kp KP_N5  &kp KP_N6        &kp KP_PLUS
-&kp KP_N1  &kp KP_N2  &kp KP_NUMBER_3  &td_mul_div
-&td        &kp KP_N0  &kp KP_DOT       &kp KP_EQUAL
+&tog_1
+&kp KP_N7   &kp KP_N8   &kp KP_N9       &kp KP_DIVIDE
+&kp KP_N4   &kp KP_N5   &kp KP_N6       &kp KP_MULTIPLY
+&kp KP_N1   &kp KP_N2   &kp KP_N3       &kp KP_MINUS
+&kp KP_N0   &kp KP_DOT  &kp KP_ENTER    &kp KP_PLUS
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
