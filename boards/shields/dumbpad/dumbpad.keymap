@@ -20,6 +20,11 @@
                 &kp C_PP    &mo 1        &kp KP_N0       &kp KP_DOT        &kp KP_EQUAL
             >;
         };
+
+        encoder_rotate: encoder_rotate {
+            compatible = "zmk,encoder-rotate";
+            bindings = <&kp &kp VOL_UP &kp &kp VOL_DOWN>;
+        };
     };
 };
 
