@@ -18,6 +18,6 @@
 #
 ---
 include:
-  - board: nice_nano//zmk
+  - board: nice_nano@2.0.0//zmk
     shield: dumbpad
     artifact-name: supermini-nrf52840-dumbpad
