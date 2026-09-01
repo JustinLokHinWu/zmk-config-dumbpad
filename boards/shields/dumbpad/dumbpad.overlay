@@ -5,3 +5,7 @@
  */
 
  #include "dumbpad.dtsi"
+
+&kscan0 {
+    wakeup-source;
+};
