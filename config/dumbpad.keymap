@@ -10,35 +10,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-        triggers-per-rotation = <24>;
-    };
-
-    behaviors {
-        td: td {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&to 1>;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        calculator {
-            bindings = <&kp C_AL_CALC>;
-            key-positions = <13 14>;
-        };
-
-        ext_off {
-            bindings = <&ext_power EP_OFF>;
-            key-positions = <4 0>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -50,8 +21,6 @@
 &kp KP_N1   &kp KP_N2   &kp KP_N3       &kp KP_MINUS
 &kp KP_N0   &kp KP_DOT  &kp KP_ENTER    &kp KP_PLUS
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_1 {
@@ -62,8 +31,11 @@
 &none        &none       &none       &none
 &none        &none       &none       &none
             >;
+        };
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        encoder_rotate: encoder_rotate {
+            compatible = "zmk,encoder-rotate";
+            bindings = <&kp &kp C_VOLUME_UP &kp &kp C_VOLUME_DOWN>;
         };
     };
 };
