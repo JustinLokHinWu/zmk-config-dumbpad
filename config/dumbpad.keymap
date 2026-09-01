@@ -27,7 +27,7 @@
             bindings = <
 &tog 0
 &bt BT_CLR   &bt BT_PRV  &bt BT_NXT  &none
-&kp KP_NUM   &kp KP_CAPS &kp KP_SLCK &kp KP_FN_LOCK
+&kp KP_NUM   &kp KP_CAPS &kp KP_SLCK &none
 &none        &none       &none       &none
 &none        &none       &none       &none
             >;
