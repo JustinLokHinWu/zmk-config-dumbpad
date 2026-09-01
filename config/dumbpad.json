@@ -2,8 +2,8 @@
   "id": "dumbpad",
   "name": "dumbpad",
   "layouts": {
-    "oled_top_transform": {
-      "name": "oled_top_transform",
+    "default_transform": {
+      "name": "default_transform",
       "layout": [
         {
           "row": 0,
