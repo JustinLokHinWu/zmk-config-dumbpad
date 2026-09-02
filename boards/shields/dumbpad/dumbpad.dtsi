@@ -65,14 +65,17 @@
 
 		led_0: led_0 {
 			gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
+			label = "LED 0";
 		};
 
 		led_1: led_1 {
 			gpios = <&pro_micro 15 GPIO_ACTIVE_HIGH>;
+			label = "LED 1";
 		};
 
 		led_2: led_2 {
 			gpios = <&pro_micro 14 GPIO_ACTIVE_HIGH>;
+			label = "LED 2";
 		};
     };
 
@@ -82,6 +85,17 @@
 		num_lock_indicator: num_lock {
             indicator = <HID_INDICATOR_NUM_LOCK>;
             leds = <&led_0>;
+			on-while-idle;
+        };
+
+		caps_lock_indicator: caps_lock {
+            indicator = <HID_INDICATOR_CAPS_LOCK>;
+            leds = <&led_1>;
+			on-while-idle;
         };
 	};
+
+	aliases {
+        indicator-led = &led_2;
+    };
 };
