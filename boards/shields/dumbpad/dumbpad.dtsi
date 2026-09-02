@@ -83,5 +83,5 @@
             indicator = <HID_INDICATOR_NUM_LOCK>;
             leds = <&led_0>;
         };
-	}
+	};
 };
