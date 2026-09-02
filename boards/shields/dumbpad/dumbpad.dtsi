@@ -63,15 +63,15 @@
     leds {
         compatible = "gpio-leds";
 
-		led_0 = led_0 {
+		led_0: led_0 {
 			gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
 		};
 
-		led_1 = led_1 {
+		led_1: led_1 {
 			gpios = <&pro_micro 15 GPIO_ACTIVE_HIGH>;
 		};
 
-		led_2 = led_2 {
+		led_2: led_2 {
 			gpios = <&pro_micro 14 GPIO_ACTIVE_HIGH>;
 		};
     };
